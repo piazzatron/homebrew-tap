@@ -5,13 +5,13 @@
 class Rostr < Formula
   desc "Give your coding agents names and remember who's doing what"
   homepage "https://getrostr.sh"
-  version "0.1.11"
+  version "0.1.12"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/piazzatron/rostr/releases/download/v0.1.11/rostr_darwin_amd64.tar.gz"
-      sha256 "2745a8fc06c7f2054254e0934b68eab38db5223eaeb1f31738de66e40f257060"
+      url "https://github.com/piazzatron/rostr/releases/download/v0.1.12/rostr_darwin_amd64.tar.gz"
+      sha256 "eddb9ed7cd3eac37ce1968f2d8341758ab02383202aa4007b7d2296b58f429ad"
 
       define_method(:install) do
         bin.install "rostr"
@@ -19,8 +19,8 @@ class Rostr < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/piazzatron/rostr/releases/download/v0.1.11/rostr_darwin_arm64.tar.gz"
-      sha256 "e094ef82083a8d9b00b7eeefad2184438fdeb0355303438dd8e0f2ddd2f3a39f"
+      url "https://github.com/piazzatron/rostr/releases/download/v0.1.12/rostr_darwin_arm64.tar.gz"
+      sha256 "2539d21bd5068e8a86989fd811d4fdd3c2e6c68ef11a25409bf263dce108eb12"
 
       define_method(:install) do
         bin.install "rostr"
@@ -31,16 +31,16 @@ class Rostr < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/piazzatron/rostr/releases/download/v0.1.11/rostr_linux_amd64.tar.gz"
-      sha256 "59acb24456782cfb747fb751c28848916eee070da0dcdd25717f986bd84e05e1"
+      url "https://github.com/piazzatron/rostr/releases/download/v0.1.12/rostr_linux_amd64.tar.gz"
+      sha256 "905f57f0a0d2aaf424413fffee9d5b8a58877c083d97a5676f18a21b2efadc5b"
       define_method(:install) do
         bin.install "rostr"
         generate_completions_from_executable(bin/"rostr", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/piazzatron/rostr/releases/download/v0.1.11/rostr_linux_arm64.tar.gz"
-      sha256 "a741e299101d6ac1294958fda7547372cef01f23cf1c550d6dffb526ba016bc8"
+      url "https://github.com/piazzatron/rostr/releases/download/v0.1.12/rostr_linux_arm64.tar.gz"
+      sha256 "ddce0c5380226474c165d9d16dafb0199bcbbf6d9a7bb0c1f9b49db09d6ec538"
       define_method(:install) do
         bin.install "rostr"
         generate_completions_from_executable(bin/"rostr", "completion")
